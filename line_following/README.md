@@ -1,5 +1,5 @@
 # Webots Line Following Robot
 
-This project implements a line following robot with odometry.
+Implement a line following robot that estimates the track distance and final orientation using odometry
 
 ![Odometry](Odometry.png)
