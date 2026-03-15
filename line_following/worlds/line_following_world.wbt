@@ -1,0 +1,126 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puckGroundSensors.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5051048122790028 0.49510296615632904 0.7069244524811674 1.929672850233836
+  position 0.006804829668197441 -0.27766283778110024 0.7604462506879645
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation 0.305 0.24 0
+  children [
+    Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "../HkgrqieiSS251YbQUn-htg_f1d2eadabe8b4fa999c602bc465945e1_line_course.png"
+              ]
+              repeatS FALSE
+              repeatT FALSE
+            }
+            roughness 1
+            roughnessMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+              ]
+            }
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+              ]
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 0.5 0.5
+            }
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -0.5 -0.5 0
+                0.5 -0.5 0
+                -0.5 0.5 0
+                0.5 0.5 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 0
+                2 0
+                0 2
+                2 2
+              ]
+            }
+            coordIndex [
+              2, 0, 1, 3, -1
+            ]
+            texCoordIndex [
+              2, 0, 1, 3, -1
+            ]
+          }
+        }
+      ]
+      name "floor"
+      model "floor"
+      boundingObject Plane {
+      }
+      locked TRUE
+    }
+    SolidBox {
+      translation 0.505 0 0.05
+      name "wall"
+      size 0.01 1 0.1
+      appearance BrushedAluminium {
+      }
+    }
+    SolidBox {
+      translation -0.505 0 0.05
+      name "wall#2"
+      size 0.01 1 0.1
+      appearance BrushedAluminium {
+      }
+    }
+    SolidBox {
+      translation 0 0.505 0.05
+      name "wall#3"
+      size 1.02 0.01 0.1
+      appearance BrushedAluminium {
+      }
+    }
+    SolidBox {
+      translation 0 -0.505 0.05
+      name "wall#4"
+      size 1.02 0.01 0.1
+      appearance BrushedAluminium {
+      }
+    }
+  ]
+  name "rectangle arena"
+  model "rectangle arena"
+}
+E-puck {
+  rotation 0 0 1 1.5707996938995747
+  controller "line_following"
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
