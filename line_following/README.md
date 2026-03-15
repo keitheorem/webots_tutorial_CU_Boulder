@@ -2,4 +2,4 @@
 
 This project implements a line following robot with odometry.
 
-![Odometry](images/Odometry.png)
+![Odometry](Odometry.png)
